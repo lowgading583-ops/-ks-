@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Study Sidekick",
+  "version": "0.1.0",
+  "description": "识别网页题目，并在右侧显示学习解析、知识点和参考结论。",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Study Sidekick"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "side_panel": {
+    "default_path": "sidebar.html"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study Sidekick</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Study Sidekick</h1>
+        <p>DeepSeek 选项答案助手</p>
+      </header>
+
+      <label>
+        <span>接口地址</span>
+        <input id="endpoint" autocomplete="off">
+      </label>
+
+      <label>
+        <span>模型</span>
+        <input id="model" autocomplete="off">
+      </label>
+
+      <label>
+        <span>API Key</span>
+        <input id="apiKey" type="password" autocomplete="off">
+      </label>
+
+      <label class="switch">
+        <input id="showReference" type="checkbox">
+        <span>启用答案输出</span>
+      </label>
+
+      <div class="actions">
+        <button id="save" type="button">保存设置</button>
+        <button id="openPanel" type="button">打开侧栏</button>
+      </div>
+
+      <p id="status" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

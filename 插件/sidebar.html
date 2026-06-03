@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学习助手</title>
+    <link rel="stylesheet" href="sidebar.css">
+  </head>
+  <body>
+    <header>
+      <h1>学习助手</h1>
+      <p>DeepSeek 选项答案</p>
+    </header>
+    <section class="settings">
+      <button id="toggleSettings" type="button">接口设置</button>
+      <form id="settingsForm" hidden>
+        <label>
+          <span>接口地址</span>
+          <input id="endpoint" autocomplete="off">
+        </label>
+        <label>
+          <span>模型</span>
+          <input id="model" autocomplete="off">
+        </label>
+        <label>
+          <span>API Key</span>
+          <input id="apiKey" type="password" autocomplete="off">
+        </label>
+        <label class="check">
+          <input id="showReference" type="checkbox">
+          <span>启用答案输出</span>
+        </label>
+        <button id="saveSettings" type="submit">保存设置</button>
+        <p id="settingsStatus"></p>
+      </form>
+    </section>
+    <main id="app">
+      <section class="empty">点击网页题目旁的“AI 解析”。</section>
+    </main>
+    <script src="sidebar.js"></script>
+  </body>
+</html>
